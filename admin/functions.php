@@ -403,7 +403,7 @@ function register_user($username, $email, $password){
 
 
 
-             redirect("/cms/admin");
+             redirect("/weebs.ph/admin");
 
 
          } else {

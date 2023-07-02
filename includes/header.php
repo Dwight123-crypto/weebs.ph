@@ -14,12 +14,12 @@
     <title>🔥weebs.ph</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/cms/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/weebs.ph/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/cms/css/blog-home.css" rel="stylesheet">
+    <link href="/weebs.ph/css/blog-home.css" rel="stylesheet">
 
-    <link href="/cms/css/styles.css" rel="stylesheet">
+    <link href="/weebs.ph/css/styles.css" rel="stylesheet">
 
 </head>
 
