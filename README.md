@@ -4,7 +4,7 @@
 
 ## Installation
 
-Use Git to clone the repo.
+Use [Git](https://git-scm.com/) to clone the repo.
 
 ## Usage
 
