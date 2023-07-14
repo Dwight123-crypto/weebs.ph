@@ -7,14 +7,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">🔥weebs Admin</a>
+                <a class="navbar-brand" href="index.php">🔥weebs_admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
 
               <!--   <li><a href="">Users Online: <?php //echo users_online(); ?></a></li> -->
 
-                <li><a href="">Users Online: <span class="usersonline"></span></a></li>
+                <!-- <li><a href="">Users Online: <span class="usersonline"></span></a></li> -->
 
                <li><a href="../index.php">HOME SITE</a></li>
                
@@ -110,4 +110,3 @@ if(isset($_SESSION['username'])) {
             
             <!-- /.navbar-collapse -->
         </nav>
-        

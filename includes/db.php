@@ -21,12 +21,3 @@ mysqli_query($connection,$query);
 //echo "We are connected";
 //
 //}
-
-
-
-
-
-
-
-
-?>

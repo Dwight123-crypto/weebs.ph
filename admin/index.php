@@ -18,7 +18,7 @@
                        
                        
                         <h1 class="page-header">
-                            Welcome to admin
+                            Hi
                             
                             
                             <small> <?php 
@@ -92,7 +92,7 @@
             </a>
         </div>
     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <!-- <div class="col-lg-3 col-md-6">
                         <div class="panel panel-green">
                             <div class="panel-heading">
                                 <div class="row">
@@ -109,10 +109,10 @@
 
                                   echo  "<div class='huge'>{$comment_count}</div>"
 
-                                    ?>
+                                    ?> -->
 
            
-                                      <div>Comments</div>
+                                      <!-- <div>Comments</div>
                                     </div>
                                 </div>
                             </div>
@@ -142,10 +142,10 @@
 
                                       echo  "<div class='huge'>{$user_count}</div>"
 
-                                        ?>
+                                        ?> -->
 
                                        
-                                        <div> Users</div>
+                                        <!-- <div> Users</div>
                                     </div>
                                 </div>
                             </div>
@@ -175,7 +175,7 @@
 
                                   echo  "<div class='huge'>{$category_count}</div>"
 
-                                    ?>
+                                    ?> -->
 
                                    <div>Categories</div>
                                     </div>
@@ -207,14 +207,14 @@ $select_all_draft_posts = mysqli_query($connection,$query);
 $post_draft_count = mysqli_num_rows($select_all_draft_posts);
 
 
-$query = "SELECT * FROM comments WHERE comment_status = 'unapproved' ";
-$unapproved_comments_query = mysqli_query($connection,$query);
-$unapproved_comment_count = mysqli_num_rows($unapproved_comments_query);
+// $query = "SELECT * FROM comments WHERE comment_status = 'unapproved' ";
+// $unapproved_comments_query = mysqli_query($connection,$query);
+// $unapproved_comment_count = mysqli_num_rows($unapproved_comments_query);
 
 
-$query = "SELECT * FROM users WHERE user_role = 'subscriber'";
-$select_all_subscribers = mysqli_query($connection,$query);
-$subscriber_count = mysqli_num_rows($select_all_subscribers);
+// $query = "SELECT * FROM users WHERE user_role = 'subscriber'";
+// $select_all_subscribers = mysqli_query($connection,$query);
+// $subscriber_count = mysqli_num_rows($select_all_subscribers);
 
 
 
@@ -230,7 +230,7 @@ $subscriber_count = mysqli_num_rows($select_all_subscribers);
                     <script type="text/javascript">
       google.load("visualization", "1.1", {packages:["bar"]});
       google.setOnLoadCallback(drawChart);
-      function drawChart() {
+      function drawChart() {    
         var data = google.visualization.arrayToDataTable([
           ['Data', 'Count'],
             

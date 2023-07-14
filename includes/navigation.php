@@ -59,7 +59,7 @@
 
                                  
                      <li>
-                        <a href="/weebs.ph/registration">Registration</a>
+                        <a href="/weebs.ph/registration.php">Registration</a>
                     </li>
                                   
                     

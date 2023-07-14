@@ -30,7 +30,7 @@
 
 
             <h1 class="page-header">
-                Welcome to admin
+                Hi
                 <small>Author</small>
             </h1>
 
