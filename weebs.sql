@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2023 at 04:52 PM
+-- Generation Time: Jul 14, 2023 at 04:42 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -67,9 +67,35 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_user`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_views_count`) VALUES
-(113, 48, '20 Best Demon Slayer Characters, Ranked', 'Kamado Tanjiro', '', '2023-07-02', '2066236485540035353.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae diam in diam malesuada gravida a sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc et urna eu justo ullamcorper tempus.', 'kimetsu no yaiba', '', 'published', 136),
-(114, 48, 'Hunter X Hunter: 7 Most Devastating Deaths In The Anime, Ranked', 'Hisoka', '', '2023-07-02', '6231-SeriesHeaders_HxH_2000x800.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum fermentum pretium.', 'HxH', '', 'published', 18),
-(115, 48, 'QUIZ: How Well Do You Know Haikyu!!\'s Shoyo Hinata?', 'Kageyama', '', '2023-07-02', 'ozcq99ip9xs41-1-scaled.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum fermentum pretium. Ut nec purus at est consequat pretium vitae at tortor. Morbi pulvinar lacinia arcu, non elementum leo commodo id. Mauris congue volutpat feugiat. Praesent quis ligula vel neque consectetur mollis. Mauris a ipsum a elit pharetra sodales vitae non diam.', 'haikyuu', '', 'published', 4);
+(136, 53, '20 Best Demon Slayer Characters, Ranked', '', 'Levi', '2023-07-14', '2066236485540035353.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, modi animi. Reiciendis asperiores iste dignissimos dolor, neque ab quisquam fuga repellendus eligendi cupiditate ipsa. Inventore explicabo iste officia facere rerum.', 'kimetsu no yaiba, anime', '', 'published', 4),
+(137, 48, 'Hunter X Hunter: 7 Most Devastating Deaths In The Anime, Ranked', '', 'Levi', '2023-07-14', '6231-SeriesHeaders_HxH_2000x800.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, modi animi. Reiciendis asperiores iste dignissimos dolor, neque ab quisquam fuga repellendus eligendi cupiditate ipsa. Inventore explicabo iste officia facere rerum.', 'hxh, anime', '', 'published', 2),
+(138, 53, 'QUIZ: How Well Do You Know Haikyu!!\'s Shoyo Hinata?', '', 'Levi', '2023-07-14', 'ozcq99ip9xs41-1-scaled.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, modi animi. Reiciendis asperiores iste dignissimos dolor, neque ab quisquam fuga repellendus eligendi cupiditate ipsa. Inventore explicabo iste officia facere rerum.', 'haikyuu, sports anime', '', 'draft', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `user_id` int(3) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `user_password` varchar(255) NOT NULL,
+  `user_firstname` varchar(255) NOT NULL,
+  `user_lastname` varchar(255) NOT NULL,
+  `user_email` varchar(255) NOT NULL,
+  `user_image` text NOT NULL,
+  `user_role` varchar(255) NOT NULL,
+  `randSalt` varchar(255) NOT NULL DEFAULT '$2y$10$iusesomecrazystrings22',
+  `token` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `user_lastname`, `user_email`, `user_image`, `user_role`, `randSalt`, `token`) VALUES
+(4, 'Levi', '$2y$12$gGtA3AvVr5zHPscBBaQoxe9XSgf5BWq0EQYQ..3hNQpmBgoltk4Y6', '', '', 'levi@ot.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22', '');
 
 --
 -- Indexes for dumped tables
@@ -88,6 +114,13 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`post_id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -101,7 +134,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
+  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
