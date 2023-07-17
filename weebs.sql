@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2023 at 04:42 AM
+-- Generation Time: Jul 17, 2023 at 01:13 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -44,6 +44,22 @@ INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `comment_id` int(3) NOT NULL,
+  `comment_post_id` int(3) NOT NULL,
+  `comment_author` varchar(255) NOT NULL,
+  `comment_email` varchar(255) NOT NULL,
+  `comment_content` text NOT NULL,
+  `comment_status` varchar(255) NOT NULL,
+  `comment_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `posts`
 --
 
@@ -67,9 +83,9 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_user`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_views_count`) VALUES
-(136, 53, '20 Best Demon Slayer Characters, Ranked', '', 'Levi', '2023-07-14', '2066236485540035353.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, modi animi. Reiciendis asperiores iste dignissimos dolor, neque ab quisquam fuga repellendus eligendi cupiditate ipsa. Inventore explicabo iste officia facere rerum.', 'kimetsu no yaiba, anime', '', 'published', 4),
-(137, 48, 'Hunter X Hunter: 7 Most Devastating Deaths In The Anime, Ranked', '', 'Levi', '2023-07-14', '6231-SeriesHeaders_HxH_2000x800.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, modi animi. Reiciendis asperiores iste dignissimos dolor, neque ab quisquam fuga repellendus eligendi cupiditate ipsa. Inventore explicabo iste officia facere rerum.', 'hxh, anime', '', 'published', 2),
-(138, 53, 'QUIZ: How Well Do You Know Haikyu!!\'s Shoyo Hinata?', '', 'Levi', '2023-07-14', 'ozcq99ip9xs41-1-scaled.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, modi animi. Reiciendis asperiores iste dignissimos dolor, neque ab quisquam fuga repellendus eligendi cupiditate ipsa. Inventore explicabo iste officia facere rerum.', 'haikyuu, sports anime', '', 'draft', 0);
+(136, 53, '20 Best Demon Slayer Characters, Ranked', '', 'Levi', '2023-07-14', '2066236485540035353.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, modi animi. Reiciendis asperiores iste dignissimos dolor, neque ab quisquam fuga repellendus eligendi cupiditate ipsa. Inventore explicabo iste officia facere rerum.', 'kimetsu no yaiba, anime', '', 'published', 28),
+(137, 48, 'Hunter X Hunter: 7 Most Devastating Deaths In The Anime, Ranked', '', 'Levi', '2023-07-14', '6231-SeriesHeaders_HxH_2000x800.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, modi animi. Reiciendis asperiores iste dignissimos dolor, neque ab quisquam fuga repellendus eligendi cupiditate ipsa. Inventore explicabo iste officia facere rerum.', 'hxh, anime', '', 'published', 10),
+(138, 52, 'QUIZ: How Well Do You Know Haikyu!!\'s Shoyo Hinata?', '', 'Levi', '2023-07-14', 'ozcq99ip9xs41-1-scaled.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, modi animi. Reiciendis asperiores iste dignissimos dolor, neque ab quisquam fuga repellendus eligendi cupiditate ipsa. Inventore explicabo iste officia facere rerum.', 'haikyuu, sports anime', '', 'published', 4);
 
 -- --------------------------------------------------------
 
@@ -95,7 +111,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `user_lastname`, `user_email`, `user_image`, `user_role`, `randSalt`, `token`) VALUES
-(4, 'Levi', '$2y$12$gGtA3AvVr5zHPscBBaQoxe9XSgf5BWq0EQYQ..3hNQpmBgoltk4Y6', '', '', 'levi@ot.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22', '');
+(5, 'Levi', '$2y$12$DJJfXXCs0aZEBjdn2F1oleZsyHRdCHPY7beA3UMbZ./L0TNT2xum6', '', '', 'Levi@ot.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22', '');
 
 --
 -- Indexes for dumped tables
@@ -134,13 +150,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
+  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
