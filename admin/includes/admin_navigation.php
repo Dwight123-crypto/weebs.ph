@@ -110,3 +110,4 @@ if(isset($_SESSION['username'])) {
             
             <!-- /.navbar-collapse -->
         </nav>
+        

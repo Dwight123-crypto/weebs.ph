@@ -30,8 +30,14 @@
 
 
             <h1 class="page-header">
-                Hi
-                <small>Author</small>
+                Welcome to 🔥weebs_admin
+                <small> <?php 
+
+                            if(isset($_SESSION['username'])) {
+
+                            echo $_SESSION['username'];
+
+                            }?></small>
             </h1>
 
 
